@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-screen-xl">
+  <div class="mx-auto max-w-screen-xl font-serif">
     <div style="grid-template-columns: 1fr 2fr 3fr;" class="grid gap-4 m-4">
       <img
         src="http://valleygrowlers.com/wp-content/uploads/2013/11/clean_line_circle_logo-300x300.jpg"
@@ -20,7 +20,7 @@
           style="object-fit: cover; width: 100%; max-height: 200px;"
         />
         <div class="m-3 text-xl">
-          We also like <span id="like" class="font-bold"></span>.
+          We also like <span id="like" class="font-bold">{{ filteredTaps }}</span>.
         </div>
         <div id="taps">
           <Taps />
@@ -50,8 +50,22 @@
   import Cart from "growlers/Cart";
   import Search from "growlers/Search";
   import Taps from "growlers/Taps";
+  import store from "growlers/store";
 
   export default defineComponent({
+    computed: {
+      filteredTaps: {
+        get() {
+          return store.filteredTaps
+          .slice(0, 3)
+          .map((beverage) => beverage.beverageName)
+          .join(', ');
+        },
+        set () {
+
+        }
+      }
+    },
     components: {
       Cart,
       Search,
