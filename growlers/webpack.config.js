@@ -47,10 +47,15 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "growlers",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        './Cart': './src/components/Cart.vue',
+        './Search': './src/components/Search.vue',
+        './Taps': './src/components/Taps.vue',
+        './store': './src/store.ts',
+      },
       shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
