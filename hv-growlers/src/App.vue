@@ -10,11 +10,7 @@
         Come join us every day starting at noon… Valley Growlers would love to have you as a guest. Come have a pint or take a growler or crowler to go....
       </div>
       <div id="search">
-        <div
-          class="p-3 border-blue-300 border-8 border-dashed text-3xl font-bold text-center"
-        >
-          Search Micro-FE
-        </div>
+        <Search />
       </div>
     </div>
     <div style="grid-template-columns: 3fr 1fr;" class="grid gap-4 m-4">
@@ -27,11 +23,7 @@
           We also like <span id="like" class="font-bold"></span>.
         </div>
         <div id="taps">
-          <div
-            class="p-3 border-blue-300 border-8 border-dashed text-3xl font-bold text-center"
-          >
-            Tap List Micro-FE
-          </div>
+          <Taps />
         </div>
       </div>
       <div>
@@ -41,11 +33,7 @@
           What's In Your Growler
         </div>
         <div id="cart">
-          <div
-            class="p-3 border-blue-300 border-8 border-dashed text-3xl font-bold text-center"
-          >
-            Cart Micro-FE
-          </div>
+          <Cart />
         </div>
         <div
           class="mt-3"
@@ -58,7 +46,16 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue';
+  import Cart from "growlers/Cart";
+  import Search from "growlers/Search";
+  import Taps from "growlers/Taps";
 
-  export default defineComponent({});
+  export default defineComponent({
+    components: {
+      Cart,
+      Search,
+      Taps
+    }
+  });
 </script>
