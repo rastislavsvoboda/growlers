@@ -4,9 +4,9 @@ This example repo has three applications the work together to use Vue Micro-FEs 
 
 # Video
 
-[short](https://www.youtube.com/watch?v=YQvQwTAqXE8)
+Simplified Micro-Frontends in Vue [short](https://www.youtube.com/watch?v=YQvQwTAqXE8)
 
-[long](https://www.youtube.com/watch?v=in80vPuCfro)
+Simplified Micro-Frontends in Vue - [long](https://www.youtube.com/watch?v=in80vPuCfro)
 
 # Installation
 
