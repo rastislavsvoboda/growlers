@@ -2,6 +2,12 @@
 
 This example repo has three applications the work together to use Vue Micro-FEs in both another Vue host application as well as in a vanilla host application.
 
+# Video
+
+[short](https://www.youtube.com/watch?v=YQvQwTAqXE8)
+
+[long](https://www.youtube.com/watch?v=in80vPuCfro)
+
 # Installation
 
 ```sh
