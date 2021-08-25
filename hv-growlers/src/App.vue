@@ -58,7 +58,7 @@
         get() {
           return store.filteredTaps
           .slice(0, 3)
-          .map((beverage) => beverage.beverageName)
+          .map((beverage: any) => beverage.beverageName)
           .join(', ');
         },
         set () {
